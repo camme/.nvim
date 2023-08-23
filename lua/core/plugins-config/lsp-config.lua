@@ -22,3 +22,5 @@ end
 
 vim.keymap.set('n', '<leader>d', vim.lsp.buf.definition, opts)
 vim.keymap.set('n', '<leader>D', vim.lsp.buf.declaration, opts)
+vim.keymap.set('n', '<leader>a', vim.lsp.buf.code_action, opts)
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, opts)

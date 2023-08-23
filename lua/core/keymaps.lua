@@ -15,6 +15,7 @@ vim.opt.completeopt=menuone,noselect,preview
 
 
 vim.opt.undodir = vim.fn.stdpath('config') .. '.undo'
+vim.opt.undofile = true
 vim.opt.wildignore = node_modules,dist,build
 --vim.opt.backupdir = '~/.vim/backup'
 --vim.opt.directory = '~/.vim/tmp'
@@ -28,5 +29,12 @@ vim.opt.tags = './tags;/'
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 vim.cmd('command W w')
 
+vim.cmd('command Json set filetype=json | %!jq');
+
+-- TABS
+vim.keymap.set('n', '\'', '<Nop>')
+vim.keymap.set('n', ';l', ':tabprevious<CR>')
+vim.keymap.set('n', ';\'', ':tabnext<CR>')
+vim.keymap.set('n', ';p', ':tabnew<CR>')
 
 
