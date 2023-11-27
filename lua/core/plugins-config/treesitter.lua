@@ -12,6 +12,7 @@ require('nvim-treesitter.configs').setup {
         'tsx',
         'yaml',
         'dart',
+        'rust',
     },
     sync_install = false,
     auto_install = true,

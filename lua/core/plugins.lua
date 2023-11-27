@@ -1,7 +1,22 @@
 require('lazy').setup({
+
+    'christianrondeau/vim-base64',
     'nvim-lualine/lualine.nvim',
     'neovim/nvim-lspconfig',
-    'hrsh7th/nvim-compe',
+
+    -- AUTO COMPLETE
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/nvim-cmp',
+    {
+        "L3MON4D3/LuaSnip",
+        version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        build = "make install_jsregexp"
+    },
+    'saadparwaiz1/cmp_luasnip',
+
     'nvim-tree/nvim-tree.lua',
     'nvim-tree/nvim-web-devicons',
     'levelone/tequila-sunrise.vim',
@@ -16,9 +31,7 @@ require('lazy').setup({
     {
         "folke/flash.nvim",
         event = "VeryLazy",
-        ---@type Flash.Config
         opts = {},
-        -- stylua: ignore
         keys = {
             { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
             { "S", mode = { "n", "o", "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
@@ -30,11 +43,6 @@ require('lazy').setup({
     {
         'folke/trouble.nvim',
         dependencies = { "nvim-tree/nvim-web-devicons" },
-        opts = {
-            -- your configuration comes here
-            -- or leave it empty to use the default settings
-            -- refer to the configuration section below
-        },
     },
     {
         "jackMort/ChatGPT.nvim",
@@ -47,6 +55,12 @@ require('lazy').setup({
             "nvim-lua/plenary.nvim",
             "nvim-telescope/telescope.nvim"
         }
-    }
+    },
+    "williamboman/mason.nvim",
+    --"nvimdev/lspsaga.nvim",
+    'simrat39/rust-tools.nvim',
+    'mfussenegger/nvim-dap',
+    'rcarriga/nvim-dap-ui',
+    'lewis6991/gitsigns.nvim',
 
 })

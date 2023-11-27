@@ -11,6 +11,7 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true;
 vim.opt.shiftwidth = 4
 vim.opt.number = true
+vim.opt.relativenumber = true
 vim.opt.completeopt=menuone,noselect,preview
 
 
@@ -36,5 +37,4 @@ vim.keymap.set('n', '\'', '<Nop>')
 vim.keymap.set('n', ';l', ':tabprevious<CR>')
 vim.keymap.set('n', ';\'', ':tabnext<CR>')
 vim.keymap.set('n', ';p', ':tabnew<CR>')
-
 
